@@ -1,6 +1,6 @@
 describe('Fluxo de Autenticação', () => {
   beforeEach(() => {
-    cy.visit('/index.html'); // Utilizando a baseUrl configurada no cypress.config.js
+    cy.visit('http://127.0.0.1:5500/frontend/index.html'); // Utilizando a baseUrl configurada no cypress.config.js
   });
 
   it('1. Login com sucesso', () => {
