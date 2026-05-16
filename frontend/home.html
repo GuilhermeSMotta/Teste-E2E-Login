@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Sistema E2E</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo!</h1>
+        <p id="mensagem-sucesso" class="success-msg"></p>
+        <button onclick="window.location.href='index.html'">Sair</button>
+    </div>
+
+    <script>
+        // Recupera a mensagem salva no script.js durante o login
+        const msg = localStorage.getItem('msgSucesso');
+        if (msg) {
+            document.getElementById('mensagem-sucesso').innerText = msg;
+        } else {
+            // Caso alguém tente acessar a home sem logar
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
