@@ -25,6 +25,8 @@ describe('Fluxo de Autenticação', () => {
     cy.get('#btn-entrar').should('be.disabled');
     cy.get('#password').type('123');
     cy.get('#btn-entrar').should('not.be.disabled');
+    cy.get('#email').clear();
+    cy.get('#btn-entrar').should('be.disabled');
   });
 
   it('4. Campos obrigatórios', () => {
